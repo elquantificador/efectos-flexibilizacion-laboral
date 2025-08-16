@@ -1,1 +1,110 @@
+---
+title: Efecto de la flexibilización laboral en los costes salariales en Ecuador
+date: '2025-08-16'
+authors: 
+- José Luis Solá
+slug: articulo
+categories:
+  - Mercado laboral
+tags:
+  - 'Mercado laboral'
+description: 'En un intento de modernizar el mercado laboral, el ejecutivo ecuatoriano busca reformar el Código de Trabajo. El proyecto propone el regreso del trabajo por horas y la creación de zonas económicas especiales con regímenes laborales flexibles, con el fin de generar empleo juvenil e inversión privada. Sin embargo, los opositores temen que estas medidas, similares a las de una reforma de 2016, precaricen el trabajo y reduzcan la protección de los empleados en un país con alta informalidad laboral.'
+thumbnail: 'images/thumbnail-Labormarket.jpg'
+images: 
+
+csl: ieee.csl
+bibliography: refs-article-protests.bib
+---
+
+
+```{r setup, include = FALSE}
+# Opciones de chunks
+knitr::opts_chunk$set(echo = F)
+```
+
+*Desde hace algunos meses, el ejecutivo ha puesto en la mira una reforma integral al Código de Trabajo. El objetivo de esta reforma es la creación de nuevas modalidades de contratación que se ajusten a los cambios y demandas del mercado. Uno de los planteamientos que más debate genera es el retorno al trabajo por horas, con la idea de flexibilizar las contrataciones para generar empleo juvenil y atraer inversión privada. Así mismo se plantea la creación de zonas económicas especiales con regímenes laborales flexibles.  *
+
+Una propuesta similar fue rechazada por la ciudadanía en la consulta popular de 2024. Los mayores opositores opinan que este proyecto solo fomenta la precarización laboral en una economía como la de Ecuador con una ya alta tasa de informalidad laboral[^1]. Esto debido a que las reformas reducen el nivel de proteccionismo hacia el empleado mientras da al empleador mayor posibilidades de gestionar la jornada laboral, contratación y remuneración.
+
+[^1]: La Organización Internacional del Trabajo (OIT) define la informalidad laboral como actividades económicas realizadas por trabajadores y unidades económicas que, en la legislación o en la práctica, no están cubiertas o lo están de forma insuficiente por contratos formales[@ILO.2002]. 
+
+De lo que no todos se acuerdan es que en 2016 el mercado laboral ya sufrió una flexibilización a causa de la adopción de la reforma laboral denominada “Ley Orgánica para la protección del Trabajo Juvenil, Protección del Empleo y Seguro del Desempleo” [@ACNUR.2016]. Esta reforma buscaba impulsar la economía, generar más empleo, especialmente para los jóvenes; y aumentar la competitividad del país, facilitando así la contratación de trabajadores. Para lograr esto se introdujeron medidas como un contrato especial para jóvenes, seguro de desempleo, y la posibilidad de reducir la jornada laboral en tiempos de crisis económica. Pero esta flexibilización en las leyes, ¿les hizo un bien o mal a los trabajadores? ¿De verdad promovió la precarización? Hay una creencia de que estas medidas protegen y fomentan empleo, mejorando el bienestar de los trabajadores. 
+
+Voy a intentar contestar estas preguntas usando datos de empresas del 2011 al 2019 de la base de datos de la Superintendencia de Compañías (Supercias). Concretamente, voy a explorar si se evidencia algún cambio en los salarios y coste laboral total (salarios más seguridad social) cuando entró  en vigencia la reforma 2016. Según la Organización para la Cooperación y el Desarrollo Económico (OECD), “la protección del empleo se refiere tanto a las regulaciones relacionadas a la contratación y despidos” [@OECD.1999]. El mercado laboral es tradicionalmente juzgado por sus tasas de empleo y desempleo porque sus resultados son medibles a niveles macroeconómicos. Sin embargo, también se puede obtener evidencia importante a través de información financiera de empresas. Esto incluye la calidad de vida laboral (sueldos, seguridad social, beneficios sociales, indemnizaciones) y la inclusión en el mercado laboral (igualdad de ingresos, igualdad de género, inmigración, grupos desfavorecidos).
+
+```{r grafo-1, fig.align='center',out.width='70%'}
+knitr::include_graphics("images/graf1-labor-market.png")
+knitr::include_graphics("images/graf2-labor-market.png")
+```
+
+Las figuras 1 y 2 muestran en el eje de las X los años de análisis desde el 2011 en adelante. Esto nos permite ver la evolución de los datos a través del tiempo. Mientras que el eje de las Y muestra el cambio (o porcentaje) de crecimiento que han tenido los salarios y costes laborales totales en un punto determinado del tiempo, respectivamente. Como podemos observar, la curva de las variables crecimiento de salarios y coste laboral disminuyen a medida que se aplicó la reforma laboral en el 2016 en comparación con los años anteriores. Es decir, vemos que la curva tiene una tendencia a decrecer conforme pasan los años. Por lo tanto, esta medida ha tenido un impacto en estas variables haciendo que su crecimiento sea menor a través del tiempo.
+
+La reforma laboral ha hecho a las empresas más flexibles. Esta medida ha influenciado el mercado de trabajo disminuyendo el crecimiento de los costes laborales en las empresas. Es decir, ha hecho disminuir la curva de las variables “incremento de salarios” e “incremento de coste laboral total” en relación con el incremento de salarios y ventas, respectivamente (respecto antes de las reformas).
+
+En economías flexibles, es muy común una alta tasa de precarización o temporalidad a cambio de preservar el empleo. Esto se debe a que, al relajar las normas, incrementa la brecha de interpretación y desprotección en cuestión de responsabilidades laborales. Y debido a esto las empresas suelen aprovecharse de las leyes para aumentar aún más sus beneficios, o prescindir de trabajadores justificando su nivel de actividad económica [@Turrini.2015]. Además, el nivel de empleo permanente tiende a disminuir mientras el nivel de empleo temporal aumenta (contratos temporales, reducción de jornada o trabajadores independientes). Por otro lado, esta situación suele agravarse aún más en sectores donde existe una alta temporalidad y precariedad como los sectores turismo, agricultura y construcción [@Damiani.2016].
+
+Para entender mejor cómo la reforma laboral de 2016 afectó a las empresas, no las miramos en un solo momento, sino que las observamos a lo largo del tiempo. Esto nos permite ver cómo cambiaron las cosas desde que entró la reforma en vigor.  Cuando usamos este tipo de datos, que representan la evolución de todo el conjunto de empresas, les llamamos datos de panel. En el siguiente análisis empírico partimos de la hipótesis de que la reforma laboral del 2016 redujo significativamente los costos laborales que antes de su aplicación. Para comprobarlo, nos enfocamos en dos variables claves que podrían verse afectadas:los salarios de los trabajadores y los costes totales de las empresas. Por supuesto, también se consideraron otros factores, como la situación financiera de las empresas, para asegurarnos de que la reducción de salarios y costos no se debiera a otras razones. A estos factores les llamamos variables de control, y nos ayudan a tener un análisis más coherente.
+<br>
+<br>
+
+
+#### Tabla 1
+#### Crecimiento de salarios y coste laboral total después de reforma laboral
+
+
+::: {#tbl-panel layout-ncol=4}
+
+
+|Variables |wlnWAGEgr  (fe)|(re) |wlnWAGCgr (fe) |(re) |
+|-------------|-----------|-----------|----------|----------|
+|wlnREVgr     | 0.421***  | 0.417***  | 0.412*** |  0.411***|
+|             | (0.016)   | (0.012)   | (0.015)  | (0.011)  | 
+|REF2016    |  -0.021***  |   -0.022*** |  -0.025*** |   -0.020***|  |           | (0.006) |      (0.004)  |    (0.005)     |  (0.004)|  |wREF2016lnREVgr| -0.004|  0.012|    -0.012|        0.007|    
+|           |    (0.020)  | (0.016)   |   (0.018) |    (0.014)|   
+|wTAtREV |-0.165***  |   -0.038***  |  -0.154***   |  -0.034***  |
+|         |(0.005)    |   (0.001)   |   (0.005)   |    (0.001)  | 
+|wWAGETSALE|  0.035*** |     0.011*** |    0.032*** | 0.010*** |   
+|       |  (0.0003) |    (0.0001)|      (0.0003)|     (0.0001)|   
+|wDEBTTA|  0.001*** |    0.001*** |    0.0005***  |   0.001***|   
+|   |  (0.0001)   |  (0.0001)   |   (0.0001)    | (0.0001)  | 
+|wPPETOTA |   -0.0005*** | -0.0003***  | -0.0004*** |-0.0003*** |  
+|     |    (0.0001)|(0.00003) | (0.0001)  | (0.00003) | 
+|wROA   |    0.003*** |    0.001***   |   0.002***  | 0.001***  | 
+|       |  (0.0003) |    (0.0002) |     (0.0003)  | (0.0002)  | 
+|wlnTA  |  0.192*** |    0.047*** |  0.178*** |    0.041*** |  
+|       |   (0.007) |   (0.001) |     (0.006) |      (0.001)  | 
+|GDPGR  |   0.010***  |   0.007***  |  0.011*** |  0.007*** |  
+|         | (0.001) |  (0.001)    |(0.001)    | (0.001) |  
+|Constant |         |  -0.718***  |         |   -0.627*** | 
+|         |         | (0.016)     |         |      (0.015)  | 
+                                                                    |Observations|   110,577|       110,577 |     110,577 |  110,577|   
+|R2     |      0.262  |    0.103   |     0.262   |      0.105|    
+|Adjusted R2| -0.175  |      0.103  |  -0.175 |     0.105 |   
+
+Robust standard errors in parentheses:
+* p<0.1; ** p<0.05; ***p<0.01
+
+:::
+
+<br>
+
+Para distinguir los periodos anteriores y posteriores a la implementación de la reforma se creó una forma simple de separar el tiempo y entender mejor su efecto, y a esta la llamamos REF2016.  Se les puso 1 a los años a partir del 2016, y 0 a los años anteriores a esta medida. Luego, para ver si la reforma tuvo un impacto, la comparamos con el crecimiento de las ventas de las empresas (wlnREVgr). La idea es ver si la reforma cambiaba la forma en que las empresas manejaban sus salarios y costos laborales, especialmente cuando sus ventas subían o bajaban. La tabla 1 muestra que, desde que se implementó la reforma laboral, el crecimiento de los salarios (wlnWAGEgr) y costes laborales total (wlnWAGCgr) se redujeron. Esto confirmó nuestra sospecha inicial.
+
+Una variable clave con la que controlábamos este comportamiento de las empresas era su nivel de ventas. Era importante asegurarnos de que esta caída en salarios no se debiera simplemente a que las empresas vendieran menos. De hecho, es lógico pensar que las empresas van ajustando los costes según su nivel de ventas. Mayores ventas están asociadas a mayores costes laborales, y viceversa. Sin embargo, al analizar nuestros datos, descubrimos algo importante: incluso cuando las empresas tenían un crecimiento en sus ventas (wREF2016lnREVgr), la reforma de 2016 tuvo un efecto negativo en los salarios y costos laborales. Es decir, la reforma laboral permitió a las empresas reducir los salarios y los costes laborales con el paso del tiempo, afectando a los empleados más allá de si las empresas vendían más o menos. Esto se traduce en una erosión de los salarios y en poder adquisitivo de los ciudadanos.
+
+En este estudio, además quise extender los efectos de los costos laborales creando nuevas mediciones a nivel de empleados. Sería interesante hacer un análisis de brecha de género, inmigración, figura contractual o cualificación del empleado a nivel de empresa. Desafortunadamente, dentro de la base de datos no existían estas variables, quedando pendiente como un estudio a futuro. Sin embargo, los resultados permiten profundizar estos efectos abordando la línea de investigación sobre el comportamiento de las empresas y su predisposición a evadir impuestos a la seguridad social, tema que se puede tratar más adelante.
+
+#### Conclusión
+La reforma laboral de 2016 en Ecuador, denominada "“Ley Orgánica para la protección del Trabajo Juvenil, Protección del Empleo y Seguro del Desempleo”, tuvo un impacto significativo en el mercado laboral.
+
+Aunque el objetivo de la reforma era fomentar el empleo juvenil y la inversión privada a través de la flexibilización, los resultados revelan que la implementación de esta ley se asoció con una disminución en el crecimiento de los salarios y los costos laborales totales. El modelo de datos de panel utilizado muestra que, incluso al controlar el crecimiento de las ventas de las empresas, la reforma del 2016 se asocia con una desaceleración en la curva de crecimiento de estas variables.
+
+Esta evidencia es consistente con la hipótesis de que la flexibilización laboral, al relajar las normas de protección del empleo, puede llevar a la precarización. Al brindar a las empresas mayor poder en la gestión de jornadas, contratos y remuneraciones, estas se priorizarán la maximización del beneficio y el consumo, así, reduciendo el poder adquisitivo de los trabajadores [@Rejman.2019]. En economías como la de Ecuador, con una alta tasa de informalidad, esta flexibilización puede agravar la vulnerabilidad de los empleados, llevando a una mayor temporalidad y una disminución del empleo permanente, y afectando su calidad de vida.
+
+Estos resultados son relevantes en el contexto político actual, donde se debate una nueva reforma al Código de Trabajo. La reforma del 2016 demuestra que la flexibilización no necesariamente se traduce en una mejora del bienestar de los trabajadores. En cambio, puede ser un factor que contribuye a la precarización laboral, lo que resalta la importancia de un enfoque más cauteloso y equilibrado que proteja los derechos de los trabajadores sin sacrificar la estabilidad del mercado.
+
+A futuro, sería importante ampliar esta investigación con variables que permitan un análisis más detallado sobre los efectos de la reforma laboral en la brecha de género, el nivel de cualificación de los empleados y las diferentes figuras contractuales. Esto podría ofrecer una visión más profunda sobre en qué medida la contratación por horas precarizó las condiciones de vida de los trabajadores. Adicionalmente, se podría explorar la relación entre la flexibilización laboral y la evasión de impuestos a la seguridad social. Por último, utilizando datos de números de empleados por empresa, se podría determinar si la reforma realmente cumplió su objetivo de generar, o al menos, preservar el empleo.
+
+
+
 
