@@ -1084,7 +1084,10 @@ abline(h = 0, col = 'red', lty = 'dashed')
     select(year, cargassociales, sueldossalariosyasimila, gastosdepersonal) %>%
     mutate(year = as.numeric(as.character(year))) %>%
     group_by(year) %>%
-    summarise(across(everything(), sum), .groups = "drop") %>%
+    dplyr::summarise(
+      dplyr::across(everything(), sum),
+      .groups = "drop"
+    ) %>%
     arrange(year) %>%
     mutate(
       lnSSCgr = log(cargassociales / dplyr::lag(cargassociales)),  # <- fuerza el lag correcto
@@ -1150,7 +1153,7 @@ abline(h = 0, col = 'red', lty = 'dashed')
  
  graficodinamico2
  
- #WAGEC (total labor costs)
+ #WAGC (total labor costs)
  graphwagc <- graph%>%
    filter(year != 2019) %>%
    select(lnWAGCgr)  
