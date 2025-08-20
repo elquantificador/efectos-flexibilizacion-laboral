@@ -1,0 +1,24 @@
+# R y temporales
+.Rhistory
+.RData
+.Rproj.user/
+
+# Datos y binarios pesados
+data/raw/
+data/processed/
+*.zip
+*.7z
+*.tar
+*.tar.gz
+*.rds
+*.sav
+*.dta
+*.xlsx
+*.xls
+*.csv
+
+# Salidas
+images/
+report/*.pdf
+report/*.docx
+report/*.html

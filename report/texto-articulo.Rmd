@@ -11,12 +11,8 @@ tags:
 description: 'En un intento de modernizar el mercado laboral, el ejecutivo ecuatoriano busca reformar el Código de Trabajo. El proyecto propone el regreso del trabajo por horas y la creación de zonas económicas especiales con regímenes laborales flexibles, con el fin de generar empleo juvenil e inversión privada. Sin embargo, los opositores temen que estas medidas, similares a las de una reforma de 2016, precaricen el trabajo y reduzcan la protección de los empleados en un país con alta informalidad laboral.'
 thumbnail: 'images/thumbnail-Labormarket.jpg'
 images: 
-
-csl: ieee.csl
 bibliography: refs-article-protests.bib
 ---
-
-
 ```{r setup, include = FALSE}
 # Opciones de chunks
 knitr::opts_chunk$set(echo = F)
@@ -106,7 +102,6 @@ Es importante reconocer que el estudio tiene varias limitaciones debido a la nat
 Estos resultados son relevantes en el contexto político actual, donde se debate una nueva reforma al Código de Trabajo. La reforma del 2016 demuestra que la flexibilización no necesariamente se traduce en una mejora del bienestar de los trabajadores. En cambio, puede ser un factor que contribuye a la precarización laboral, lo que resalta la importancia de un enfoque más cauteloso y equilibrado que proteja los derechos de los trabajadores sin sacrificar la estabilidad del mercado.
 
 A futuro, sería importante ampliar esta investigación con variables que permitan un análisis más detallado sobre los efectos de la reforma laboral en la brecha de género, el nivel de cualificación de los empleados y las diferentes figuras contractuales. Esto podría ofrecer una visión más profunda sobre en qué medida la contratación por horas precariza las condiciones de vida de los trabajadores. Adicionalmente, se podría explorar la relación entre la flexibilización laboral y la evasión de impuestos a la seguridad social. Por último, utilizando datos de números de empleados por empresa, se podría determinar si la reforma realmente cumplió su objetivo de generar, o al menos, preservar el empleo.
-
 
 *En el siguiente enlace puedes tener acceso a los datos y código para reproducir el artículo dentro del repositorio de [GitHub](https://github.com/Joseluissola/Labor-market-analysis-in-Ecuador).*
 
