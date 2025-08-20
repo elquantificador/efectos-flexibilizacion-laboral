@@ -1,37 +1,6 @@
 # Efectos de la flexibilización laboral — El Quantificador
 
-Repositorio para el artículo sobre los efectos de la flexibilización laboral en el mercado de trabajo argentino.
-
-## Estructura del repositorio
-
-```
-elquantificador-articulo/
-│
-├── elquantificador-articulo.Rproj     # Proyecto R (obligatorio)
-│
-├── code/                              # Scripts (separados por etapa)
-│   ├── 00_setup.R                     # Carga/instala paquetes, rutas, opciones
-│   ├── download/                      # Descarga o lectura de fuentes
-│   │   └── 01_download.R
-│   ├── cleaning/                      # Limpieza, validación y transformación
-│   │   └── 02_cleaning.R
-│   └── analysis/                      # Análisis, tabulados, modelos y figuras
-│       └── 03_analysis.R
-│
-├── data/                              # Datos (NO subir pesados o sensibles)
-│   ├── raw/                           # Datos crudos (inmutables)
-│   └── processed/                     # Datos listos para análisis
-│
-├── images/                            # Gráficos y figuras exportadas
-│
-├── report/                            # Reportes intermedios/finales
-│   ├── draft.Rmd                      # Borrador reproducible
-│   └── final.pdf                      # Versión final (ligera)
-│
-├── README.md                          # Guía del proyecto y reproducción
-├── LICENSE                            # Licencia
-└── .gitignore                         # Ignorar temporales y binarios
-```
+Repositorio para el artículo sobre los efectos de la flexibilización laboral en el mercado de trabajo ecuatoriano.
 
 ## Requisitos técnicos
 
