@@ -13,3 +13,17 @@ Repositorio para el artículo sobre los efectos de la flexibilización laboral e
 2. El reporte se genera mediante el archivo `report/texto-articulo.Rmd`.
 
 El [repositorio original](https://github.com/Joseluissola/Labor-market-analysis-in-Ecuador) se encuentra en el perfil de GitHub del [autor](https://github.com/Joseluissola).
+
+
+## Licencias y cómo citar
+
+- **Código:** [MIT](LICENSE).
+- **Texto, figuras y tablas:** [CC BY-NC 4.0](LICENSE-content).
+- **Datos de terceros:** conservan los términos de su fuente
+  ([aviso](DATA-NOTICE.md)).
+- **Nombre y logotipos:** todos los derechos reservados.
+
+Las cifras y resultados pueden citarse libremente. Menciona a los autores y a
+El Quantificador (LIDE) y enlaza la publicación original. Los usos comerciales
+de gráficos, tablas o texto requieren autorización previa:
+elquantificador@laboratoriolide.org. Ver también `CITATION.cff`.
