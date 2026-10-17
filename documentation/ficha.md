@@ -42,12 +42,10 @@ empresa por año, identificada por RUC.
 
 | Fuente | Institución | Periodo | Acceso | Script |
 |---|---|---|---|---|
-| Estados financieros de empresas (archivos `estadosFinancieros_AAAA.zip`) | Superintendencia de Compañías, Valores y Seguros (SUPERCIAS), portal de mercado de valores | 2011 a 2019 | Descarga automática desde `https://mercadodevalores.supercias.gob.ec/reportes/zip/estadosFinancieros_AAAA.zip` (2011 a 2018 activa; 2019 comentada en el script) | `code/efectos_flexibilizacion_laboral_analisis.R` |
+| Estados financieros de empresas (archivos `estadosFinancieros_AAAA.zip`) | Superintendencia de Compañías, Valores y Seguros (SUPERCIAS), portal de mercado de valores | 2011 a 2019 | Descarga automática desde `https://mercadodevalores.supercias.gob.ec/reportes/zip/estadosFinancieros_AAAA.zip` (2011 a 2019) | `code/efectos_flexibilizacion_laboral_analisis.R` |
 
-Los datos no están en el repositorio. El script define la URL de 2019, pero deja
-comentadas su descarga y descompresión, mientras que más adelante lee los
-archivos `balances_2019_*.txt`: para 2019 debes descargar y descomprimir el
-`.zip` equivalente antes de continuar.
+Los datos no están en el repositorio: el script descarga y descomprime los nueve
+`.zip` (2011 a 2019) en `data/raw/`, que git ignora.
 
 ## Salidas
 
@@ -55,35 +53,27 @@ archivos `balances_2019_*.txt`: para 2019 debes descargar y descomprimir el
   (gráfico dinámico `dygraphs` exportado con `webshot`).
 - `images/graf2-labor-market.png`: crecimiento porcentual del coste laboral
   total (salarios más seguridad social).
-- `Tablas_EQ.txt`: tabla `stargazer` en texto con los cuatro modelos de panel
-  (efectos fijos y aleatorios para salarios y coste laboral), con errores
-  estándar robustos. Lo escribe el script en el directorio de trabajo y no está
-  versionado.
-- `graf1-labor-market.html` y `graf2-labor-market.html`: versiones interactivas
-  de los gráficos, escritas por el script en el directorio de trabajo y no
-  versionadas.
+- `tables/Tablas_EQ.txt`: tabla `stargazer` en texto con los cuatro modelos de
+  panel (efectos fijos y aleatorios para salarios y coste laboral), con errores
+  estándar robustos.
+- `images/graf1-labor-market.html` y `images/graf2-labor-market.html`: versiones
+  interactivas de los gráficos; no están versionadas.
 
 ## Cómo replicar en este repositorio
 
-Este repositorio no tiene `MASTER.R`. Los pasos salen del README anterior y del
-script:
+Este repositorio no tiene `MASTER.R`. El directorio de trabajo es la raíz del
+repositorio (abre `elquantificador-articulo.Rproj` o haz `setwd()` a la raíz).
 
 1. Clona o descarga el repositorio.
-2. Antes de ejecutar, edita la línea 4 de
-   `code/efectos_flexibilizacion_laboral_analisis.R`: `setwd()` apunta a una
-   carpeta de la máquina del autor. Cambia esa ruta a una carpeta vacía donde
-   guardar las descargas, o ejecuta desde la raíz del proyecto.
-3. Ejecuta el script completo. En orden: descarga y descomprime los `.zip` de
-   SUPERCIAS de 2011 a 2018 (2019 requiere el paso manual descrito arriba),
-   lee los archivos `balances_AAAA_N.txt`, elimina RUC duplicados por año, une
-   los años en `masterdata`, calcula crecimientos y winsoriza al 5 %, estima los
-   modelos `plm`, escribe `Tablas_EQ.txt` y exporta los dos gráficos a HTML y PNG.
-   Requiere internet y `webshot::install_phantomjs()`.
-4. Copia `graf1-labor-market.png` y `graf2-labor-market.png` a `images/` si
-   quieres actualizar las figuras del artículo.
-5. Renderiza `report/texto-articulo.Rmd` para regenerar el texto. Busca las
-   figuras en `images/` relativo a `report/`; en este repositorio `images/` está
-   en la raíz, así que ajusta la ruta o copia la carpeta.
+2. Ejecuta `code/efectos_flexibilizacion_laboral_analisis.R` completo. En orden:
+   crea `data/raw/`, `images/` y `tables/`; descarga y descomprime los `.zip` de
+   SUPERCIAS de 2011 a 2019 en `data/raw/`; lee los archivos
+   `balances_AAAA_N.txt`; elimina RUC duplicados por año; une los años en
+   `masterdata`; calcula crecimientos y winsoriza al 5 %; estima los modelos
+   `plm`; escribe `tables/Tablas_EQ.txt` y exporta los dos gráficos a HTML y PNG
+   en `images/`. Requiere internet y `webshot::install_phantomjs()`.
+3. Renderiza `report/texto-articulo.Rmd` para regenerar el texto. Busca las
+   figuras en `../images/`, es decir, en la carpeta `images/` de la raíz.
 
 ## README anterior
 

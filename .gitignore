@@ -17,8 +17,8 @@ data/processed/
 *.xls
 *.csv
 
-# Salidas
-images/
+# Salidas (images/ y tables/ se versionan; solo se ignoran los HTML interactivos)
+images/*.html
 report/*.pdf
 report/*.docx
 report/*.html
