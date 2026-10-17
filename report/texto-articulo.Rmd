@@ -29,8 +29,8 @@ De lo que no todos se acuerdan es que en 2016 el mercado laboral ya sufrió una 
 Voy a intentar contestar estas preguntas usando datos de empresas del 2011 al 2019 de la base de datos de la Superintendencia de Compañías (SUPERCIAS). Concretamente, voy a explorar si se evidencia algún cambio en los salarios y coste laboral total (salarios más seguridad social) cuando entró  en vigencia la reforma 2016. Según la Organización para la Cooperación y el Desarrollo Económico (OECD), “la protección del empleo se refiere tanto a las regulaciones relacionadas a la contratación y despidos” [@OECD.1999]. El mercado laboral es tradicionalmente juzgado por sus tasas de empleo y desempleo porque sus resultados son medibles a niveles macroeconómicos. Sin embargo, también se puede obtener evidencia importante a través de información financiera de empresas. Esto incluye la calidad de vida laboral (sueldos, seguridad social, beneficios sociales, indemnizaciones) y la inclusión en el mercado laboral (igualdad de ingresos, igualdad de género, inmigración, grupos desfavorecidos).
 
 ```{r grafo-1, fig.align='center',out.width='70%'}
-knitr::include_graphics("images/graf1-labor-market.png")
-knitr::include_graphics("images/graf2-labor-market.png")
+knitr::include_graphics("../images/graf1-labor-market.png")
+knitr::include_graphics("../images/graf2-labor-market.png")
 ```
 
 Las figuras 1 y 2 muestran en el eje de las X los años de análisis desde el 2011 en adelante. Esto nos permite ver la evolución de los datos a través del tiempo. El eje de las Y muestra el cambio (o porcentaje) de crecimiento que han tenido los salarios y costes laborales totales en un punto determinado del tiempo, respectivamente. Como podemos observar, la curva de las variables crecimiento de salarios y coste laboral disminuyen a medida que se aplicó la reforma laboral en el 2016 en comparación con los años anteriores. Es decir, vemos que la curva tiene una tendencia a decrecer conforme pasan los años. Por lo tanto, esta medida ha tenido un impacto en estas variables haciendo que su crecimiento sea menor a través del tiempo.
