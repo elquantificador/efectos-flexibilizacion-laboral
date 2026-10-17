@@ -22,3 +22,6 @@ images/
 report/*.pdf
 report/*.docx
 report/*.html
+
+# Metadatos de fuentes del artículo
+!documentation/fuentes.csv
