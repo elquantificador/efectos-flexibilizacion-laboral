@@ -6,7 +6,7 @@ repositorios.
 
 ## Identificación
 
-- **Título:** Efectos de la flexibilización laboral — El Quantificador
+- **Título:** Efecto de la flexibilización laboral en los costes salariales en Ecuador
 - **Descripción del repositorio:** Repositorio para el articulo de El Quantificador: Efecto de la flexibilización laboral en los costes salariales en Ecuador
 - **Autoría:** José Luis Solá
 - **Fecha de publicación:** 2025-08-19
